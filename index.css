@@ -102,7 +102,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Hide volume/brightness OSD indicator completely */
-.osdHeader,
 .volumeOsd,
 .brightnessOsd,
 .iconOsd {
@@ -283,7 +282,7 @@ input[type="range"]:focus {
 .videoOsdBottom .paper-icon-button-light,
 .osdControls .paper-icon-button-light {
     vertical-align: middle !important;
-    padding: 0 !important;
+    padding: 8px !important;
     margin: 0 !important;
     height: auto !important;
 }
@@ -292,7 +291,7 @@ input[type="range"]:focus {
 .osdControls .paper-icon-button-light .material-icons,
 .videoOsdBottom .paper-icon-button-light span,
 .osdControls .paper-icon-button-light span {
-    padding: 8px !important;
+    padding: 0 !important;
     margin: 0 !important;
     position: relative !important;
     top: -2px !important;
@@ -772,12 +771,29 @@ button:active,
 [data-focusscale]:focus,
 .cardBox:focus,
 .cardBox.focusable:focus {
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+    box-shadow: none !important;
     outline: none !important;
     outline-color: transparent !important;
     background-color: transparent !important;
-    border: none !important;
-    border-color: transparent !important;
+    border: 4px solid #ffffff !important;
+    border-color: #ffffff !important;
+    box-sizing: border-box !important;
+}
+
+/* Web view hover states - mirror TV focus behavior */
+.listItem:hover,
+.listItem-focusscale:hover,
+.selectItemButton:hover,
+.card-focusscale:hover,
+.cardBox:hover,
+.cardBox.focusable:hover {
+    box-shadow: none !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    background-color: transparent !important;
+    border: 4px solid #ffffff !important;
+    border-color: #ffffff !important;
+    box-sizing: border-box !important;
 }
 
 /* TV selected item states */
@@ -1163,6 +1179,16 @@ html body .card.show-focus:focus .cardBox {
     box-sizing: border-box !important;
 }
 
+/* Web view hover states - mirror TV focus behavior for season/episode selection */
+html body .card:hover .cardBox,
+html body .card:hover .cardBox.visualCardBox {
+    outline: none !important;
+    border: 4px solid #ffffff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
 /* Override any blue accent/primary colors globally */
 html {
     --theme-primary-color: #ffffff !important;
@@ -1194,4 +1220,11 @@ select:active {
     border-color: #ffffff !important;
     outline: none !important;
     box-shadow: none !important;
+}
+
+/* Playback controls - grey hover background (high specificity override) */
+html body .videoOsdBottom .paper-icon-button-light:hover,
+html body .osdControls .paper-icon-button-light:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
 }
