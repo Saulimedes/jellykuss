@@ -141,10 +141,56 @@ body:has(.htmlvideoplayer) .backgroundContainer {
 }
 
 /* Video page elements - all transparent */
-.upNextContainer,
 .syncPlayContainer,
 #videoOsdPage > *:not(.videoOsdBottom) {
     background: transparent !important;
+}
+
+/* Next episode OSD box - black with white text */
+.upNextContainer,
+.upNextDialog,
+.upNextContainer-transparent {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.upNextContainer *,
+.upNextDialog * {
+    color: #ffffff !important;
+}
+
+/* Next episode info text */
+.upNextContainer-info,
+.upNextContainer-mediainfo,
+.upNextContainer-title,
+.upNextContainer-overview,
+.upNextContainer-episodeTitle,
+.upNextContainer-seriesTitle,
+.upNextContainer-text,
+.nextUpCard,
+.nextUpCard * {
+    color: #ffffff !important;
+}
+
+/* Next episode buttons */
+.upNextContainer .emby-button,
+.upNextContainer button,
+.upNextDialog .emby-button,
+.upNextDialog button,
+.btnStartFromBeginning,
+.btnResumeVideo {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.upNextContainer .emby-button:hover,
+.upNextContainer button:hover,
+.upNextDialog .emby-button:hover,
+.upNextDialog button:hover {
+    background-color: #444444 !important;
+    color: #ffffff !important;
 }
 
 /* Remove black border from controls */
@@ -365,9 +411,18 @@ input[type="range"]:focus {
 .raised:focus,
 .button-flat:hover,
 .button-flat:focus {
-    background-color: #000000 !important;
+    background-color: #333333 !important;
     color: #ffffff !important;
     border-radius: 0 !important;
+}
+
+/* Header search button hover */
+.headerButton:hover,
+.headerSearchButton:hover,
+button:has(.material-icons.search):hover,
+.headerButton:has(.search):hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
 }
 
 /* Prevent poster/card images from getting hover background-color */
@@ -407,21 +462,17 @@ a.cardImageContainer.emby-button:focus,
     border-radius: 0 !important;
 }
 
-/* Profile/user image - keep squared */
+/* Profile/user image - round image, square button for hover */
 .headerUserImage,
 .userImage,
 .avatar,
-.headerButton img,
 .MuiAvatar-root,
-.MuiAvatar-circular,
-.headerUserButtonRound,
-div.headerUserButtonRound,
-.headerButton.headerUserButtonRound,
-div.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound {
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
+.MuiAvatar-circular {
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
 }
+
 
 /* Card overlay - disabled hover brightening effect */
 .cardOverlayContainer {
@@ -1101,63 +1152,20 @@ html body span.cardOverlayButtonIcon.cardOverlayButtonIcon-hover {
     -moz-outline-style: none !important;
 }
 
-html body .headerUserButtonRound:hover,
-html body div.headerUserButtonRound:hover,
-html body .headerUserButtonRound:hover *,
-html body div.headerUserButtonRound:hover * {
-    border: 2px solid #333333 !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-}
-
 /* Remove ripple effect from profile button */
-.headerUserButtonRound .mdl-button__ripple-container,
-.headerUserButtonRound::before,
-.headerUserButtonRound::after {
+.headerUserButtonRound .mdl-button__ripple-container {
     display: none !important;
 }
 
-/* Nuclear override for profile button - no flash ever */
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound {
-    background-color: #000000 !important;
-    -webkit-tap-highlight-color: transparent !important;
-    transition: none !important;
-    animation: none !important;
-    border: 2px solid transparent !important;
-    box-sizing: border-box !important;
-}
-
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:hover,
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:focus,
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:active,
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:focus-within,
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:focus-visible {
-    background-color: #000000 !important;
-    -webkit-tap-highlight-color: transparent !important;
-    transition: none !important;
-    animation: none !important;
-    border: 2px solid #333333 !important;
-}
-
-
-html body .headerUserButtonRound:active,
-html body .headerUserButtonRound:focus,
-html body div.headerUserButtonRound:active,
-html body div.headerUserButtonRound:focus {
-    border: 2px solid #333333 !important;
-    background-color: transparent !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
 /* TV Focus - Override blue borders with white (only on focus) */
+/* Cards need transparent border by default to prevent layout shift on hover */
 .cardBox.visualCardBox,
 .cardScalable,
 .cardBox {
-    border: none !important;
+    border: 4px solid transparent !important;
     outline: none !important;
     box-shadow: none !important;
+    box-sizing: border-box !important;
 }
 
 /* Only outline around the whole card, not inner elements */
@@ -1227,4 +1235,69 @@ html body .videoOsdBottom .paper-icon-button-light:hover,
 html body .osdControls .paper-icon-button-light:hover {
     background-color: #333333 !important;
     color: #ffffff !important;
+}
+
+/* Menu/list items - prevent wobble on hover by using consistent box model */
+.listItem,
+.menuItem,
+.navMenuOption,
+.actionSheetMenuItem,
+.selectContainer,
+.listItem-button,
+.paper-icon-button-light,
+.emby-button {
+    box-sizing: border-box !important;
+    border: 4px solid transparent !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.listItem:hover,
+.listItem:focus,
+.menuItem:hover,
+.menuItem:focus,
+.navMenuOption:hover,
+.navMenuOption:focus,
+.actionSheetMenuItem:hover,
+.actionSheetMenuItem:focus,
+.listItem-button:hover,
+.listItem-button:focus {
+    background-color: #333333 !important;
+    border: 4px solid transparent !important;
+    margin: 0 !important;
+}
+
+/* Settings menu items specifically */
+.selectContainer:hover,
+.selectContainer:focus,
+.paperList .listItem:hover,
+.paperList .listItem:focus {
+    background-color: #333333 !important;
+    border: 4px solid transparent !important;
+}
+
+/* ============================================
+   PROFILE BUTTON
+   ============================================ */
+
+/* Button - square for hover, with padding for larger hover area */
+button.headerUserButtonRound,
+button.headerUserButton {
+    border-radius: 0 !important;
+    overflow: visible !important;
+    padding: 12px !important;
+    box-sizing: content-box !important;
+    margin: 0 !important;
+}
+
+/* Inner div - round profile picture */
+.headerUserButtonRound > .headerUserButtonRound,
+div.headerUserButtonRound[style] {
+    border-radius: 50% !important;
+    border: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Hover effect on button */
+button.headerUserButtonRound:hover {
+    background: #333333 !important;
 }
