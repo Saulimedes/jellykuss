@@ -1,10 +1,48 @@
 @import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Font%20Awesome/solid.css");
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+/* ============================================
+   PIXEL FONT - Silkscreen
+   ============================================ */
+
+/* Section headlines (My Media, Continue Watching, Next Up, etc.) */
+.sectionTitle,
+.sectionTitleText,
+h2.sectionTitle,
+.sectionTitleTextButton,
+.sectionTitleButton {
+    font-family: 'Silkscreen', cursive !important;
+    letter-spacing: 0.5px;
+    font-size: 0.9em !important;
+}
+
+/* Card titles (movie/series names in grids) */
+.cardText,
+.cardTextCentered,
+.primaryCardText,
+.cardFooterText,
+.innerCardFooterText {
+    font-family: 'Silkscreen', cursive !important;
+    font-size: 0.7em !important;
+}
+
+/* Detail page titles (when viewing a movie/series) */
+.itemName,
+h1.itemName,
+h3.itemName,
+.detailPagePrimaryContainer h1,
+.parentName,
+.seriesName {
+    font-family: 'Silkscreen', cursive !important;
+    font-size: 0.85em !important;
+}
 
 /* Override accent colors from blue to white */
 :root {
     --theme-primary-color: #ffffff !important;
     --theme-accent-color: #ffffff !important;
     --accent: #ffffff !important;
+    --focus-border-color: #ffffff !important;
     /* Floating progress bar settings */
     --floating-progress-height: 7px;
     --theme-menu-shadow-colour: rgba(0, 0, 0, 0.3);
@@ -13,6 +51,12 @@
 html {
     --theme-primary-color: #ffffff !important;
     --theme-accent-color: #ffffff !important;
+}
+
+/* Override any blue borders globally */
+* {
+    --theme-primary-color: #ffffff !important;
+    --focus-border-color: #ffffff !important;
 }
 
 /* Android MUI menu text fix - force white text on dark backgrounds */
@@ -293,12 +337,23 @@ body:has(.htmlvideoplayer) {
 
 .videoOsdBottom .paper-icon-button-light:focus,
 .videoOsdBottom .paper-icon-button-light:active,
+.videoOsdBottom .paper-icon-button-light:focus-visible,
+.videoOsdBottom .paper-icon-button-light:focus-within,
 .osdControls .paper-icon-button-light:focus,
-.osdControls .paper-icon-button-light:active {
+.osdControls .paper-icon-button-light:active,
+.osdControls .paper-icon-button-light:focus-visible,
+.osdControls .paper-icon-button-light:focus-within,
+.osdControls .btnPause:focus,
+.osdControls .btnPlay:focus,
+.osdControls .btnPlayPause:focus,
+.videoOsdBottom .btnPause:focus,
+.videoOsdBottom .btnPlay:focus,
+.videoOsdBottom .btnPlayPause:focus {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
     background-color: transparent !important;
+    background: transparent !important;
 }
 
 /* Progress bar slider - no white border on hover */
@@ -404,7 +459,6 @@ input[type="range"]:focus {
 }
 
 .paper-icon-button-light:hover:not(.headerUserButtonRound),
-.paper-icon-button-light:focus:not(.headerUserButtonRound),
 .fab:hover,
 .fab:focus,
 .raised:hover,
@@ -852,6 +906,65 @@ button:has(.cardOverlayButtonIcon):hover,
     box-sizing: border-box !important;
 }
 
+/* Fix blue line between card image and footer on hover */
+.cardBox:hover .cardImageContainer,
+.cardBox:hover .innerCardFooter,
+.cardBox:hover .cardScalable,
+.cardBox:hover .cardContent,
+.cardBox:hover .cardContent-button,
+.cardBox:focus .cardImageContainer,
+.cardBox:focus .innerCardFooter,
+.cardBox:focus .cardScalable,
+.cardBox:focus .cardContent,
+.cardBox:focus .cardContent-button,
+.card:hover .cardImageContainer,
+.card:hover .innerCardFooter,
+.card:focus .cardImageContainer,
+.card:focus .innerCardFooter {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* NUCLEAR fix for blue border under card images */
+.cardImageContainer,
+.cardImageContainer:hover,
+.cardImageContainer:focus,
+.cardPadder,
+.cardPadder:hover,
+.innerCardFooter,
+.innerCardFooter:hover {
+    border: none !important;
+    border-color: transparent !important;
+}
+
+/* Fix blue border on cardScalable (TV focus) */
+.cardScalable,
+.cardScalable:hover,
+.cardScalable:focus,
+.cardBox:hover .cardScalable,
+.cardBox:focus .cardScalable,
+.cardBox.show-focus:focus .cardScalable,
+.card:hover .cardScalable,
+.card:focus .cardScalable {
+    border: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure all card child elements have no border */
+.cardBox .cardScalable,
+.cardBox .cardPadder,
+.cardBox .cardImageContainer,
+.cardBox .cardOverlayContainer,
+.cardBox .blurhash-canvas,
+.cardBox .cardText,
+.cardBox .cardTextCentered {
+    border: none !important;
+    outline: none !important;
+}
+
 /* TV selected item states */
 .itemSelected,
 .selected,
@@ -925,14 +1038,21 @@ button:has(.cardOverlayButtonIcon):hover,
     color: #ffffff !important;
 }
 
-/* Hide logos */
-a[href="#/"] .MuiListItemIcon-root,
-.MuiBox-root.css-1j3tjfb,
+/* Custom Logo */
 .pageTitleWithLogo,
 .pageTitleWithDefaultLogo,
-.pageTitleWithLogo.pageTitleWithDefaultLogo,
-.pageTitleWithLogo .pageTitleWithDefaultLogo,
 .pageTitle.pageTitleWithDefaultLogo {
+    background-image: url('data:image/png;base64,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') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    min-width: 120px !important;
+    min-height: 40px !important;
+}
+
+/* Hide default logo elements */
+a[href="#/"] .MuiListItemIcon-root,
+.MuiBox-root.css-1j3tjfb {
     display: none !important;
 }
 
@@ -1235,9 +1355,56 @@ select:active {
     box-shadow: none !important;
 }
 
-/* Playback controls - grey hover background (high specificity override) */
-html body .videoOsdBottom .paper-icon-button-light:hover,
-html body .osdControls .paper-icon-button-light:hover {
+/* Playback controls - transparent by default, grey ONLY on hover */
+html body .videoOsdBottom button,
+html body .videoOsdBottom .paper-icon-button-light,
+html body .osdControls button,
+html body .osdControls .paper-icon-button-light,
+html body .osdControls .xlargePaperIconButton,
+html body .osdControls .largePaperIconButton,
+html body .osdControls span.xlargePaperIconButton,
+html body .osdControls span.largePaperIconButton,
+html body .osdControls .pause,
+html body .osdControls .play_arrow,
+html body .videoOsdBottom .xlargePaperIconButton,
+html body .videoOsdBottom .largePaperIconButton,
+html body .videoOsdBottom span.xlargePaperIconButton,
+html body .videoOsdBottom span.largePaperIconButton,
+html body .videoOsdBottom .pause,
+html body .videoOsdBottom .play_arrow,
+span.xlargePaperIconButton.material-icons,
+span.largePaperIconButton.material-icons,
+span.xlargePaperIconButton.material-icons.pause,
+span.xlargePaperIconButton.material-icons.play_arrow,
+.osdControls span.material-icons,
+.videoOsdBottom span.material-icons {
+    background-color: transparent !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* Reset ALL states to transparent */
+html body .osdControls .xlargePaperIconButton:focus,
+html body .osdControls .xlargePaperIconButton:active,
+html body .osdControls .xlargePaperIconButton:focus-visible,
+html body .videoOsdBottom .xlargePaperIconButton:focus,
+html body .videoOsdBottom .xlargePaperIconButton:active,
+html body .videoOsdBottom .xlargePaperIconButton:focus-visible,
+html body .videoOsdBottom button:focus,
+html body .videoOsdBottom button:active,
+html body .osdControls button:focus,
+html body .osdControls button:active {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+/* Grey ONLY on actual hover */
+html body .osdControls .xlargePaperIconButton:hover,
+html body .osdControls .largePaperIconButton:hover,
+html body .videoOsdBottom .xlargePaperIconButton:hover,
+html body .videoOsdBottom .largePaperIconButton:hover,
+html body .videoOsdBottom button:hover,
+html body .osdControls button:hover {
     background-color: #333333 !important;
     color: #ffffff !important;
 }
@@ -1258,7 +1425,6 @@ button:has(.material-icons.arrow_back):hover {
 .actionSheetMenuItem,
 .selectContainer,
 .listItem-button,
-.paper-icon-button-light,
 .emby-button {
     box-sizing: border-box !important;
     border: 4px solid transparent !important;
@@ -1327,4 +1493,32 @@ button.headerUserButtonRound:hover {
 button[title="Home"] span:not(.material-icons),
 button[title="Favorites"] span:not(.material-icons) {
     display: none !important;
+}
+
+/* ============================================
+   VIDEO PLAYER OSD - play/pause button fix
+   Only targets the video player controls, not card overlays
+   ============================================ */
+html body .videoOsdBottom span.xlargePaperIconButton,
+html body .videoOsdBottom span.largePaperIconButton,
+html body .videoOsdBottom span.xlargePaperIconButton.material-icons,
+html body .videoOsdBottom span.largePaperIconButton.material-icons,
+html body .videoOsdBottom span.xlargePaperIconButton.material-icons.pause,
+html body .videoOsdBottom span.xlargePaperIconButton.material-icons.play_arrow,
+html body .videoOsdBottom-maincontrols span.xlargePaperIconButton,
+html body .videoOsdBottom-maincontrols span.largePaperIconButton,
+html body .osdControls span.xlargePaperIconButton,
+html body .osdControls span.largePaperIconButton {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Only show grey on actual hover - video player OSD only */
+html body .videoOsdBottom span.xlargePaperIconButton:hover,
+html body .videoOsdBottom span.largePaperIconButton:hover,
+html body .videoOsdBottom-maincontrols span.xlargePaperIconButton:hover,
+html body .videoOsdBottom-maincontrols span.largePaperIconButton:hover,
+html body .osdControls span.xlargePaperIconButton:hover,
+html body .osdControls span.largePaperIconButton:hover {
+    background-color: #333333 !important;
 }
