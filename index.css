@@ -131,6 +131,35 @@
 .material-icons.play_circle_filled::before { content: "\eb7b"; }
 .material-icons.play_circle::before { content: "\eb7b"; }
 .material-icons.play_circle_outline::before { content: "\eb7b"; }
+.material-icons.library_add::before { content: "\eb7d"; }
+.material-icons.library_add_check::before { content: "\ea7f"; }
+.material-icons.playlist_add::before { content: "\eb7d"; }
+.material-icons.add_box::before { content: "\eb7d"; }
+.material-icons.add_to_queue::before { content: "\eb7d"; }
+.material-icons.queue_play_next::before { content: "\eb7d"; }
+.material-icons.video_call::before { content: "\eb7d"; }
+.material-icons.note_add::before { content: "\eb7d"; }
+.material-icons.post_add::before { content: "\eb7d"; }
+.material-icons.collections::before { content: "\eb17"; }
+.material-icons.photo_library::before { content: "\eb17"; }
+.material-icons.collections_bookmark::before { content: "\ea37"; }
+.material-icons.select_all::before { content: "\ea7f"; }
+.material-icons.check_box::before { content: "\ea7f"; }
+.material-icons.check_box_outline_blank::before { content: "\ebc0"; }
+.material-icons.indeterminate_check_box::before { content: "\ebc0"; }
+.material-icons.touch_app::before { content: "\eb83"; }
+.material-icons.pan_tool::before { content: "\eb83"; }
+.material-icons.back_hand::before { content: "\eb83"; }
+.material-icons.front_hand::before { content: "\eb83"; }
+.material-icons.radio_button_unchecked::before { content: "\ebc0"; }
+.material-icons.radio_button_checked::before { content: "\ea7f"; }
+.material-icons.tap_and_play::before { content: "\eb83"; }
+.material-icons.content_copy::before { content: "\ea9c"; }
+.material-icons.copy::before { content: "\ea9c"; }
+.material-icons.file_copy::before { content: "\ea9c"; }
+.material-icons.link::before { content: "\eb35"; }
+.material-icons.insert_link::before { content: "\eb35"; }
+.material-icons.open_in_new::before { content: "\eb35"; }
 
 /* PIXEL FONT */
 
@@ -1665,6 +1694,7 @@ span.material-icons.arrow_back:hover,
     background-color: #333333 !important;
     border: 4px solid transparent !important;
     margin: 0 !important;
+    font-weight: normal !important;
 }
 
 .selectContainer:hover,
@@ -1690,6 +1720,18 @@ span.material-icons.arrow_back:hover,
     font-family: 'Silkscreen', cursive !important;
 }
 
+.navMenuOptionText,
+.sectionName {
+    font-weight: 400 !important;
+}
+
+.navMenuOption:hover .navMenuOptionText,
+.navMenuOption:hover .sectionName,
+.navMenuOption:focus .navMenuOptionText,
+.navMenuOption:focus .sectionName {
+    font-weight: 400 !important;
+}
+
 .navMenuOptionIcon {
     margin-right: 12px !important;
 }
@@ -1706,6 +1748,8 @@ span.material-icons.arrow_back:hover,
     margin-right: 16px !important;
     flex-shrink: 0 !important;
     display: inline-flex !important;
+    background-color: transparent !important;
+    background: transparent !important;
     align-items: center !important;
     justify-content: center !important;
     width: 24px !important;
