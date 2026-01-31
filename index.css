@@ -1,11 +1,139 @@
-@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Font%20Awesome/solid.css");
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/pixelarticons@1.8.1/fonts/pixelart-icons-font.css');
 
-/* ============================================
-   PIXEL FONT - Silkscreen
-   ============================================ */
+/* PIXEL ART ICONS */
 
-/* Section headlines (My Media, Continue Watching, Next Up, etc.) */
+.material-icons {
+    font-size: 0 !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+}
+
+.material-icons::before {
+    font-family: 'pixelart-icons-font' !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    -webkit-font-smoothing: none !important;
+    -moz-osx-font-smoothing: unset !important;
+    text-rendering: optimizeSpeed !important;
+}
+
+.material-icons.play_arrow::before { content: "\eb7b"; }
+.material-icons.pause::before { content: "\eb75"; }
+.material-icons.stop::before { content: "\eab9"; }
+.material-icons.skip_next::before { content: "\eb67"; }
+.material-icons.skip_previous::before { content: "\eb7f"; }
+.material-icons.fast_forward::before { content: "\eaed"; }
+.material-icons.fast_rewind::before { content: "\eb7f"; }
+.material-icons.replay::before { content: "\eb8b"; }
+.material-icons.shuffle::before { content: "\eba2"; }
+.material-icons.repeat::before { content: "\eb8b"; }
+.material-icons.home::before { content: "\eb05"; }
+.material-icons.search::before { content: "\eb96"; }
+.material-icons.menu::before { content: "\eb48"; }
+.material-icons.close::before { content: "\ea8e"; }
+.material-icons.arrow_back::before { content: "\ea1d"; }
+.material-icons.arrow_forward::before { content: "\ea1f"; }
+.material-icons.chevron_left::before { content: "\ea85"; }
+.material-icons.chevron_right::before { content: "\ea86"; }
+.material-icons.expand_more::before { content: "\ea84"; }
+.material-icons.expand_less::before { content: "\ea87"; }
+.material-icons.more_vert::before { content: "\eb62"; }
+.material-icons.more_horiz::before { content: "\eb61"; }
+.material-icons.favorite::before { content: "\eb03"; }
+.material-icons.favorite_border::before { content: "\eb03"; }
+.material-icons.star::before { content: "\eb03"; }
+.material-icons.check::before { content: "\ea7f"; }
+.material-icons.check_circle::before { content: "\ea7f"; }
+.material-icons.done::before { content: "\ea7f"; }
+.material-icons.volume_up::before { content: "\ebdb"; }
+.material-icons.volume_down::before { content: "\ebd9"; }
+.material-icons.volume_mute::before { content: "\ebda"; }
+.material-icons.volume_off::before { content: "\ebdf"; }
+.material-icons.fullscreen::before { content: "\ead4"; }
+.material-icons.fullscreen_exit::before { content: "\ead4"; }
+.material-icons.picture_in_picture::before { content: "\ead4"; }
+.material-icons.subtitles::before { content: "\ebaf"; }
+.material-icons.closed_caption::before { content: "\ebaf"; }
+.material-icons.settings::before { content: "\eba4"; }
+.material-icons.tune::before { content: "\eba4"; }
+.material-icons.person::before { content: "\ebd0"; }
+.material-icons.account_circle::before { content: "\ebd0"; }
+.material-icons.people::before { content: "\ebd1"; }
+.material-icons.group::before { content: "\ebd1"; }
+.material-icons.download::before { content: "\eac8"; }
+.material-icons.file_download::before { content: "\eac8"; }
+.material-icons.upload::before { content: "\ebcc"; }
+.material-icons.file_upload::before { content: "\ebcc"; }
+.material-icons.delete::before { content: "\ebc3"; }
+.material-icons.delete_outline::before { content: "\ebc3"; }
+.material-icons.edit::before { content: "\ead2"; }
+.material-icons.create::before { content: "\ead2"; }
+.material-icons.bookmark::before { content: "\ea37"; }
+.material-icons.bookmark_border::before { content: "\ea37"; }
+.material-icons.folder::before { content: "\eaec"; }
+.material-icons.folder_open::before { content: "\eaec"; }
+.material-icons.list::before { content: "\eb36"; }
+.material-icons.view_list::before { content: "\eb36"; }
+.material-icons.apps::before { content: "\ea13"; }
+.material-icons.grid_view::before { content: "\ea13"; }
+.material-icons.cast::before { content: "\ea71"; }
+.material-icons.cast_connected::before { content: "\ea71"; }
+.material-icons.movie::before { content: "\eb65"; }
+.material-icons.tv::before { content: "\eb65"; }
+.material-icons.theaters::before { content: "\eb65"; }
+.material-icons.image::before { content: "\eb17"; }
+.material-icons.photo::before { content: "\eb17"; }
+.material-icons.music_note::before { content: "\eb66"; }
+.material-icons.audiotrack::before { content: "\eb66"; }
+.material-icons.schedule::before { content: "\ea8c"; }
+.material-icons.access_time::before { content: "\ea8c"; }
+.material-icons.calendar_today::before { content: "\ea65"; }
+.material-icons.event::before { content: "\ea65"; }
+.material-icons.notifications::before { content: "\eb71"; }
+.material-icons.notifications_none::before { content: "\eb71"; }
+.material-icons.info::before { content: "\eb1b"; }
+.material-icons.info_outline::before { content: "\eb1b"; }
+.material-icons.warning::before { content: "\ebe2"; }
+.material-icons.error::before { content: "\ebe2"; }
+.material-icons.error_outline::before { content: "\ebe2"; }
+.material-icons.visibility::before { content: "\ead7"; }
+.material-icons.visibility_off::before { content: "\ead6"; }
+.material-icons.lock::before { content: "\eb39"; }
+.material-icons.lock_open::before { content: "\eb38"; }
+.material-icons.add::before { content: "\eb7d"; }
+.material-icons.add_circle::before { content: "\eb7d"; }
+.material-icons.remove::before { content: "\eb56"; }
+.material-icons.remove_circle::before { content: "\eb56"; }
+.material-icons.power_settings_new::before { content: "\eb7e"; }
+.material-icons.logout::before { content: "\eb3b"; }
+.material-icons.login::before { content: "\eb3a"; }
+.material-icons.refresh::before { content: "\eb8b"; }
+.material-icons.sync::before { content: "\ebb5"; }
+.material-icons.sort::before { content: "\eba7"; }
+.material-icons.filter_list::before { content: "\eba7"; }
+.material-icons.keyboard::before { content: "\eb1f"; }
+.material-icons.gamepad::before { content: "\eaf4"; }
+.material-icons.sports_esports::before { content: "\eaf4"; }
+.material-icons.gif::before { content: "\eaf5"; }
+.material-icons.video_library::before { content: "\eb65"; }
+.material-icons.queue::before { content: "\eb59"; }
+.material-icons.queue_music::before { content: "\eb59"; }
+.material-icons.playlist_play::before { content: "\eb59"; }
+.material-icons.dashboard::before { content: "\eae1"; }
+.material-icons.mode_edit::before { content: "\ead2"; }
+.material-icons.exit_to_app::before { content: "\eb3b"; }
+.material-icons.play_circle_filled::before { content: "\eb7b"; }
+.material-icons.play_circle::before { content: "\eb7b"; }
+.material-icons.play_circle_outline::before { content: "\eb7b"; }
+
+/* PIXEL FONT */
+
 .sectionTitle,
 .sectionTitleText,
 h2.sectionTitle,
@@ -17,7 +145,6 @@ h2.sectionTitle,
 }
 
 
-/* Fix scroll buttons position for My Media and Continue Watching sections */
 .emby-scroller-container:has(> h2.sectionTitle):not(:has(.sectionTitleContainer)) {
     position: relative !important;
     overflow: visible !important;
@@ -30,7 +157,6 @@ h2.sectionTitle,
     z-index: 10 !important;
 }
 
-/* Compact header to make room for scroll buttons */
 .skinHeader {
     min-height: 0 !important;
     padding: 0.25em 0 !important;
@@ -39,6 +165,7 @@ h2.sectionTitle,
 .skinHeader .headerTop {
     min-height: 0 !important;
     padding: 0.25em 0.5em !important;
+    position: relative !important;
 }
 
 .skinHeader .headerButton:not(.headerUserButtonRound) {
@@ -47,7 +174,6 @@ h2.sectionTitle,
     min-height: 36px !important;
 }
 
-/* Keep profile button same size as search icon */
 .skinHeader button.headerUserButtonRound {
     min-width: unset !important;
     min-height: unset !important;
@@ -56,7 +182,6 @@ h2.sectionTitle,
     padding: 0.3em !important;
 }
 
-/* Inner profile image - match icon size */
 .skinHeader .headerUserButtonRound > .headerUserButtonRound,
 .skinHeader div.headerUserButtonRound {
     width: 20px !important;
@@ -66,17 +191,14 @@ h2.sectionTitle,
     background-size: cover !important;
 }
 
-/* Hide the Home/Favorites tabs to save space */
 .skinHeader .headerTabs {
     display: none !important;
 }
 
-/* Reduce header blur background height */
 .skinHeader-withBackground {
     backdrop-filter: blur(10px) !important;
 }
 
-/* Card titles (movie/series names in grids) */
 .cardText,
 .cardTextCentered,
 .primaryCardText,
@@ -86,12 +208,10 @@ h2.sectionTitle,
     font-size: 0.7em !important;
 }
 
-/* Hide redundant text under library cards (My Media section) */
 .section0 .cardText,
 .section0 .cardTextCentered,
 .cardBox:has([data-type="CollectionFolder"]) .cardText,
 .cardBox:has([data-collectiontype]) .cardText,
-/* TV-compatible: target cards with data attributes directly */
 [data-type="CollectionFolder"] .cardText,
 [data-type="CollectionFolder"] .cardTextCentered,
 [data-collectiontype] .cardText,
@@ -103,8 +223,6 @@ h2.sectionTitle,
     display: none !important;
 }
 
-/* LG webOS TV - hide text overlay inside card images */
-/* Multiple hiding techniques for older browser engines */
 .cardImageContainer .cardText,
 .cardImageContainer .cardTextCentered,
 .cardScalable .cardText,
@@ -128,7 +246,6 @@ h2.sectionTitle,
     overflow: hidden !important;
 }
 
-/* Alternative: hide the innerCardFooter entirely for library cards */
 .section0 .innerCardFooter,
 .section0 .cardFooter,
 .section0 .cardText,
@@ -138,7 +255,6 @@ h2.sectionTitle,
     opacity: 0 !important;
 }
 
-/* Detail page titles (when viewing a movie/series) */
 .itemName,
 h1.itemName,
 h3.itemName,
@@ -149,13 +265,11 @@ h3.itemName,
     font-size: 0.9em !important;
 }
 
-/* Override accent colors from blue to white */
 :root {
     --theme-primary-color: #ffffff !important;
     --theme-accent-color: #ffffff !important;
     --accent: #ffffff !important;
     --focus-border-color: #ffffff !important;
-    /* Floating progress bar settings */
     --floating-progress-height: 7px;
     --theme-menu-shadow-colour: rgba(0, 0, 0, 0.3);
 }
@@ -165,13 +279,11 @@ html {
     --theme-accent-color: #ffffff !important;
 }
 
-/* Override any blue borders globally */
 * {
     --theme-primary-color: #ffffff !important;
     --focus-border-color: #ffffff !important;
 }
 
-/* Android MUI menu text fix - force white text on dark backgrounds */
 .MuiTypography-root,
 .MuiListItemText-primary,
 .MuiListItemText-secondary,
@@ -182,7 +294,6 @@ html {
     color: #ffffff !important;
 }
 
-/* MUI drawer/menu background and text */
 .MuiDrawer-root,
 .MuiMenu-paper,
 .MuiList-root,
@@ -191,7 +302,6 @@ html {
     color: #ffffff !important;
 }
 
-/* Override blue accent/focus states */
 .MuiListItemButton-root:hover,
 .MuiListItemButton-root.Mui-selected,
 .MuiListItemButton-root.Mui-focusVisible,
@@ -200,7 +310,6 @@ html {
     background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Jellyfin accent color overrides */
 .button-accent,
 .emby-button.button-accent,
 .accent,
@@ -211,7 +320,6 @@ button.raised.button-submit.emby-button {
     color: #000000 !important;
 }
 
-/* Focus/selection rings and highlights */
 .emby-button:focus,
 .paper-icon-button-light:focus:not(.headerUserButtonRound),
 .navMenuOption-selected,
@@ -220,7 +328,6 @@ button.raised.button-submit.emby-button {
     border-color: #ffffff !important;
 }
 
-/* Progress bars and sliders - thumb/handle */
 .osdPositionSlider::-webkit-slider-thumb,
 .osdVolumeSlider::-webkit-slider-thumb,
 .mdl-slider::-webkit-slider-thumb {
@@ -245,26 +352,22 @@ input[type="range"]::-moz-range-thumb {
     background: #ffffff !important;
 }
 
-/* Slider foreground (progress fill) */
 .mdl-slider-background-lower,
 .mdl-slider-background-lower-fill {
     background: #ffffff !important;
     background-color: #ffffff !important;
 }
 
-/* Slider bubble (thumbnail preview) - keep default */
 .sliderBubble {
     background: transparent !important;
 }
 
-/* Hide volume/brightness OSD indicator completely */
 .volumeOsd,
 .brightnessOsd,
 .iconOsd {
     display: none !important;
 }
 
-/* Video OSD page - transparent background so video fills screen */
 #videoOsdPage,
 #videoOsdPage.page,
 .videoOsdPage,
@@ -280,7 +383,6 @@ input[type="range"]::-moz-range-thumb {
     background-color: transparent !important;
 }
 
-/* Remove any top/bottom padding or margins on video */
 .videoPlayerContainer,
 #videoPlayer,
 video {
@@ -288,7 +390,6 @@ video {
     padding: 0 !important;
 }
 
-/* Force background container hidden during video playback */
 body.standby .backgroundContainer,
 body:has([data-type="video-osd"]) .backgroundContainer,
 body:has(#videoOsdPage) .backgroundContainer,
@@ -296,13 +397,11 @@ body:has(.htmlvideoplayer) .backgroundContainer {
     display: none !important;
 }
 
-/* Video page elements - all transparent */
 .syncPlayContainer,
 #videoOsdPage > *:not(.videoOsdBottom) {
     background: transparent !important;
 }
 
-/* Next episode OSD box - black with white text */
 .upNextContainer,
 .upNextDialog,
 .upNextContainer-transparent {
@@ -316,7 +415,6 @@ body:has(.htmlvideoplayer) .backgroundContainer {
     color: #ffffff !important;
 }
 
-/* Next episode info text */
 .upNextContainer-info,
 .upNextContainer-mediainfo,
 .upNextContainer-title,
@@ -329,7 +427,6 @@ body:has(.htmlvideoplayer) .backgroundContainer {
     color: #ffffff !important;
 }
 
-/* Next episode buttons */
 .upNextContainer .emby-button,
 .upNextContainer button,
 .upNextDialog .emby-button,
@@ -349,20 +446,17 @@ body:has(.htmlvideoplayer) .backgroundContainer {
     color: #ffffff !important;
 }
 
-/* Remove black border from controls */
 .videoOsdBottom {
     border: none !important;
     border-top: none !important;
 }
 
-/* Body background during video playback */
 body:has([data-type="video-osd"]),
 body:has(#videoOsdPage),
 body:has(.htmlvideoplayer) {
     background: #000000 !important;
 }
 
-/* Video splash/loading screen - black background */
 .videoPlayerContainer,
 .htmlvideoplayer,
 #videoPlayer,
@@ -372,7 +466,6 @@ body:has(.htmlvideoplayer) {
     background-color: #000000 !important;
 }
 
-/* Player controls - compact black background */
 .videoOsdBottom {
     background: transparent !important;
     padding: 0 !important;
@@ -404,7 +497,6 @@ body:has(.htmlvideoplayer) {
     font-size: 1.2em !important;
 }
 
-/* Player control buttons - white icons default, grey background on hover, no scaling */
 .videoOsdBottom .paper-icon-button-light,
 .osdControls .paper-icon-button-light {
     border: none !important;
@@ -468,7 +560,6 @@ body:has(.htmlvideoplayer) {
     background: transparent !important;
 }
 
-/* Progress bar slider - no white border on hover */
 .osdPositionSlider,
 .osdPositionSlider:hover,
 .osdPositionSlider:focus,
@@ -491,7 +582,6 @@ input[type="range"]:focus {
     box-shadow: none !important;
 }
 
-/* Player control buttons - adjust vertical alignment */
 .videoOsdBottom .paper-icon-button-light,
 .osdControls .paper-icon-button-light {
     vertical-align: middle !important;
@@ -513,24 +603,24 @@ input[type="range"]:focus {
 .osdTimeText,
 .osdPositionText,
 .osdDurationText {
+    font-family: 'Silkscreen', cursive !important;
     background: rgba(0, 0, 0, 0.8) !important;
     padding: 2px 6px !important;
-    border-radius: 4px !important;
+    border-radius: 0 !important;
 }
 
-/* Volume slider text/numbers background */
 .sliderBubbleText,
 .volumeText {
+    font-family: 'Silkscreen', cursive !important;
     background: rgba(0, 0, 0, 0.8) !important;
     padding: 2px 6px !important;
-    border-radius: 4px !important;
+    border-radius: 0 !important;
 }
 
 .itemProgressBarForeground-primary {
     background-color: #ffffff !important;
 }
 
-/* Loading spinner/circle - change from blue to white */
 .mdl-spinner__layer-1 {
     border-color: #ffffff !important;
 }
@@ -557,7 +647,6 @@ input[type="range"]:focus {
     border-top-color: #ffffff !important;
 }
 
-/* SVG spinner stroke */
 .mdl-spinner svg circle,
 .loading-spinner svg circle {
     stroke: #ffffff !important;
@@ -570,7 +659,7 @@ input[type="range"]:focus {
     border-radius: 0 !important;
 }
 
-.paper-icon-button-light:hover:not(.headerUserButtonRound),
+.paper-icon-button-light:hover:not(.headerUserButtonRound):not(.cardOverlayButton),
 .fab:hover,
 .fab:focus,
 .raised:hover,
@@ -582,8 +671,13 @@ input[type="range"]:focus {
     border-radius: 0 !important;
 }
 
-/* Header search button hover and focus (TV remote navigation) - no background change */
-/* Exclude headerUserButtonRound - it has a background-image for the profile pic */
+.cardBox .paper-icon-button-light:hover,
+.cardOverlayContainer .paper-icon-button-light:hover,
+.card .paper-icon-button-light:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
 .headerButton:hover:not(.headerUserButtonRound),
 .headerButton:focus:not(.headerUserButtonRound),
 .headerSearchButton:hover,
@@ -604,7 +698,6 @@ html body .headerButton:focus:not(.headerUserButtonRound) {
     box-shadow: none !important;
 }
 
-/* Force white icon color on search button hover/focus */
 .headerButton:hover .material-icons,
 .headerButton:focus .material-icons,
 .headerButton:hover span,
@@ -612,7 +705,6 @@ html body .headerButton:focus:not(.headerUserButtonRound) {
     color: #ffffff !important;
 }
 
-/* Prevent poster/card images from getting hover background-color */
 .cardImageContainer:hover,
 .cardImageContainer:focus,
 a.cardImageContainer:hover,
@@ -628,7 +720,6 @@ a.cardImageContainer.emby-button:focus,
     opacity: 1 !important;
 }
 
-/* Icon button hover */
 .btnPlay:hover,
 .detailButton:hover {
     background-color: #333333 !important;
@@ -637,7 +728,6 @@ a.cardImageContainer.emby-button:focus,
     outline: none !important;
 }
 
-/* Header buttons - no background on hover/focus */
 .headerButton:hover:not(.headerUserButtonRound),
 .headerButton:focus:not(.headerUserButtonRound) {
     background-color: transparent !important;
@@ -647,7 +737,6 @@ a.cardImageContainer.emby-button:focus,
     outline: none !important;
 }
 
-/* Base button styles - square */
 .emby-button,
 .paper-icon-button-light,
 .fab,
@@ -659,7 +748,6 @@ a.cardImageContainer.emby-button:focus,
     border-radius: 0 !important;
 }
 
-/* Profile/user image - round image, square button for hover */
 .headerUserImage,
 .userImage,
 .avatar,
@@ -671,7 +759,6 @@ a.cardImageContainer.emby-button:focus,
 }
 
 
-/* Card overlay - disabled hover brightening effect */
 .cardOverlayContainer {
     background-color: transparent !important;
     opacity: 0 !important;
@@ -683,7 +770,6 @@ a.cardImageContainer.emby-button:focus,
     opacity: 1 !important;
 }
 
-/* Card action buttons (mark played, favorites, more) - hidden by default */
 .cardOverlayButton,
 .cardOverlayFab-primary,
 .btnCardOptions,
@@ -703,7 +789,6 @@ a.cardImageContainer.emby-button:focus,
     opacity: 1 !important;
 }
 
-/* Play button - transparent background, dark hover, NO BORDER EVER */
 .cardOverlayFab-primary,
 .cardOverlayButton-centered,
 .cardOverlayFab-primary *,
@@ -742,7 +827,6 @@ a.cardImageContainer.emby-button:focus,
     -webkit-focus-ring-color: transparent !important;
 }
 
-/* Remove border on play button click/focus/active - ALL states */
 .cardOverlayFab-primary:focus,
 .cardOverlayFab-primary:active,
 .cardOverlayFab-primary:focus-within,
@@ -765,7 +849,6 @@ a.cardImageContainer.emby-button:focus,
     box-shadow: none !important;
 }
 
-/* NUCLEAR - kill all borders on card overlay buttons */
 .cardOverlayFab-primary,
 .cardOverlayFab-primary *,
 .cardOverlayFab-primary::before,
@@ -796,7 +879,6 @@ span.cardOverlayButtonIcon.play_arrow {
     box-shadow: none !important;
 }
 
-/* Last resort - strip ALL styling from card play button */
 .cardOverlayFab-primary,
 .cardOverlayButton,
 .cardOverlayButton-hover,
@@ -824,18 +906,15 @@ button::-moz-focus-inner,
     outline: 0 !important;
 }
 
-/* Try removing any ring utilities */
 .ring-0, .ring, [class*="ring"] {
     --tw-ring-shadow: 0 0 #0000 !important;
 }
 
-/* Ripple/click animation on buttons */
 .mdl-button__ripple-container,
 .cardOverlayFab-primary .mdl-button__ripple-container {
     display: none !important;
 }
 
-/* Nuclear - remove all white borders on click anywhere on cards */
 .cardBox *:focus,
 .cardBox *:active,
 .card *:focus,
@@ -859,7 +938,6 @@ button:active,
     ring: none !important;
 }
 
-/* Focus ring removal */
 *:focus {
     outline-color: transparent !important;
 }
@@ -872,7 +950,6 @@ button:active,
     box-shadow: none !important;
 }
 
-/* Search box - white border instead of blue */
 .emby-input:focus,
 .searchfields-txtSearch:focus,
 #searchTextInput:focus {
@@ -881,17 +958,14 @@ button:active,
     box-shadow: none !important;
 }
 
-/* Selection commands bar - dark grey */
 .selectionCommandsPanel {
     background-color: #000000 !important;
 }
 
-/* Item selection overlay - transparent so content is visible */
 .itemSelectionPanel {
     background-color: transparent !important;
 }
 
-/* Default card backgrounds (no image) - dark grey instead of blue */
 .defaultCardBackground,
 .defaultCardBackground1,
 .defaultCardBackground2,
@@ -908,7 +982,6 @@ button:active,
     background: #1a1a1a !important;
 }
 
-/* MUI primary buttons - grey instead of blue */
 .MuiButton-containedPrimary,
 .MuiButton-colorPrimary {
     background-color: #333333 !important;
@@ -921,20 +994,17 @@ button:active,
     background: #444444 !important;
 }
 
-/* Device info stack - grey background */
 .MuiStack-root.css-1se9ewx,
 .MuiStack-root[class*="css-"] {
     background-color: #1a1a1a !important;
 }
 
-/* Notification icon bubbles - black background */
 .MuiSvgIcon-root[data-testid="NotificationsIcon"],
 .MuiBadge-badge,
 .MuiBadge-colorPrimary {
     background-color: #000000 !important;
 }
 
-/* Checkboxes - white instead of blue */
 .emby-checkbox:checked + span + .checkboxOutline,
 .checkboxOutline,
 .multiSelectCheckboxOutline {
@@ -950,7 +1020,6 @@ button:active,
     color: #000000 !important;
 }
 
-/* Remove blue borders around selected items */
 .itemSelectionPanel,
 .card.selected,
 .card.selecting {
@@ -964,7 +1033,6 @@ button:active,
     box-shadow: none !important;
 }
 
-/* Other card buttons hover effect - black on video cards */
 .cardOverlayButton:hover,
 .cardOverlayButton-hover:hover,
 .btnCardOptions:hover,
@@ -977,7 +1045,6 @@ button:has(.cardOverlayButtonIcon):hover,
     color: #ffffff !important;
 }
 
-/* Card overlay buttons - square (no rounded corners) */
 .cardOverlayButton,
 .cardOverlayButton-hover,
 .cardOverlayFab-primary,
@@ -992,7 +1059,36 @@ button:has(.cardOverlayButtonIcon):hover,
     background-color: transparent !important;
 }
 
-/* Card hover/focus/active - no scaling, no border/outline */
+.cardOverlayButton .material-icons::before,
+.btnCardOptions .material-icons::before,
+.cardBox .paper-icon-button-light .material-icons::before,
+.cardOverlayContainer .paper-icon-button-light .material-icons::before {
+    font-size: 28px !important;
+}
+
+.cardOverlayButton,
+.btnCardOptions,
+.cardBox .paper-icon-button-light,
+.cardOverlayContainer .paper-icon-button-light {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 6px !important;
+}
+
+.cardOverlayButton:hover,
+.btnCardOptions:hover,
+.cardBox .paper-icon-button-light:hover,
+.cardOverlayContainer .paper-icon-button-light:hover,
+.cardOverlayContainer button:hover,
+.cardBox .cardOverlayContainer button:hover,
+.cardBox .cardOverlayContainer .paper-icon-button-light:hover,
+html body .cardBox .paper-icon-button-light:hover,
+html body .cardOverlayContainer .paper-icon-button-light:hover,
+html body .cardOverlayContainer button:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
 .card:hover,
 .card:focus,
 .card:active,
@@ -1007,13 +1103,11 @@ button:has(.cardOverlayButtonIcon):hover,
     transform: scale(1) !important;
 }
 
-/* Detail page poster - no scale */
 .detailImageContainer .card,
 .detailImageContainer .cardBox {
     transform: none !important;
 }
 
-/* TV interface focus states - only for actual TV/remote navigation */
 .listItem:focus,
 .listItem-focusscale:focus,
 .selectItemButton:focus,
@@ -1033,7 +1127,6 @@ button:has(.cardOverlayButtonIcon):hover,
     box-sizing: border-box !important;
 }
 
-/* Web view hover states - mirror TV focus behavior */
 .listItem:hover,
 .listItem-focusscale:hover,
 .selectItemButton:hover,
@@ -1049,7 +1142,6 @@ button:has(.cardOverlayButtonIcon):hover,
     box-sizing: border-box !important;
 }
 
-/* Fix blue line between card image and footer on hover */
 .cardBox:hover .cardImageContainer,
 .cardBox:hover .innerCardFooter,
 .cardBox:hover .cardScalable,
@@ -1069,7 +1161,6 @@ button:has(.cardOverlayButtonIcon):hover,
     box-shadow: none !important;
 }
 
-/* NUCLEAR fix for blue border under card images */
 .cardImageContainer,
 .cardImageContainer:hover,
 .cardImageContainer:focus,
@@ -1081,7 +1172,6 @@ button:has(.cardOverlayButtonIcon):hover,
     border-color: transparent !important;
 }
 
-/* Fix blue border on cardScalable (TV focus) */
 .cardScalable,
 .cardScalable:hover,
 .cardScalable:focus,
@@ -1096,7 +1186,6 @@ button:has(.cardOverlayButtonIcon):hover,
     box-shadow: none !important;
 }
 
-/* Ensure all card child elements have no border */
 .cardBox .cardScalable,
 .cardBox .cardPadder,
 .cardBox .cardImageContainer,
@@ -1108,7 +1197,6 @@ button:has(.cardOverlayButtonIcon):hover,
     outline: none !important;
 }
 
-/* TV selected item states */
 .itemSelected,
 .selected,
 .card.selected,
@@ -1120,13 +1208,11 @@ button:has(.cardOverlayButtonIcon):hover,
     border: none !important;
 }
 
-/* Override any blue focus colors globally */
 *:focus {
     outline-color: rgba(255, 255, 255, 0.5) !important;
     border-color: inherit !important;
 }
 
-/* Catch any element with blue outline/border on focus */
 .focusable:focus,
 .button-focusscale:focus,
 [tabindex]:focus {
@@ -1134,7 +1220,6 @@ button:has(.cardOverlayButtonIcon):hover,
     box-shadow: none !important;
 }
 
-/* Focus visible for keyboard/remote navigation */
 .emby-button:focus-visible,
 .paper-icon-button-light:focus-visible,
 .cardBox:focus-visible,
@@ -1144,26 +1229,22 @@ button:has(.cardOverlayButtonIcon):hover,
     box-shadow: none !important;
 }
 
-/* MUI icon buttons */
 .MuiIconButton-root:hover,
 .MuiIconButton-root:focus {
     background-color: rgba(255, 255, 255, 0.15) !important;
     color: #ffffff !important;
 }
 
-/* Ripple effects */
 .MuiTouchRipple-root,
 .MuiTouchRipple-ripple,
 .MuiTouchRipple-child {
     color: #ffffff !important;
 }
 
-/* Sidebar background black */
 .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft {
     background-color: #000000 !important;
 }
 
-/* Ensure other elements stay black */
 .countIndicator,
 .indicator,
 .backgroundContainer,
@@ -1181,21 +1262,23 @@ button:has(.cardOverlayButtonIcon):hover,
     color: #ffffff !important;
 }
 
-/* Custom Logo in header */
 .pageTitleWithLogo,
 .pageTitleWithDefaultLogo,
 .pageTitle.pageTitleWithDefaultLogo {
     background-image: url('data:image/png;base64,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') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
-    background-position: left center !important;
-    min-width: 80px !important;
-    min-height: 24px !important;
+    background-position: center center !important;
+    min-width: 120px !important;
+    min-height: 36px !important;
     display: block !important;
     visibility: visible !important;
+    margin: 0 auto !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
 }
 
-/* Hide "please login" text and adjust layout */
 #loginPage h1 {
     display: none;
 }
@@ -1203,13 +1286,11 @@ button:has(.cardOverlayButtonIcon):hover,
     margin-top: 50px;
 }
 
-/* Hide "manual" and "forgot password" buttons */
 #loginPage .raised.cancel.block.btnManual.emby-button,
 #loginPage .raised.cancel.block.btnForgotPassword.emby-button {
     display: none;
 }
 
-/* Floating progress bar styling */
 .fullInnerCardFooter,
 .activeSession .backgroundProgress,
 .activeSession .playbackProgress,
@@ -1232,14 +1313,12 @@ button:has(.cardOverlayButtonIcon):hover,
     -moz-border-radius: var(--floating-progress-roundness);
 }
 
-/* Progress bar foreground - white */
 .itemProgressBarForeground,
 .itemProgressBarForeground-primary {
     background-color: #ffffff !important;
     border-radius: var(--floating-progress-roundness) !important;
 }
 
-/* Hide progress bar on card hover */
 .cardBox:hover .itemProgressBar,
 .cardBox:hover .fullInnerCardFooter,
 .card:hover .itemProgressBar,
@@ -1253,28 +1332,23 @@ button:has(.cardOverlayButtonIcon):hover,
     transition: opacity 0.2s ease !important;
 }
 
-/* Progress bar background - transparent */
 .itemProgressBar {
     background: transparent !important;
     background-color: transparent !important;
 }
 
-/* Video player progress bar - white (played portion) */
 .mdl-slider-background-lower {
     background-color: #ffffff !important;
 }
 
-/* Range input accent color for progress */
 input[type="range"] {
     accent-color: #ffffff !important;
 }
 
-/* Jellyfin specific progress slider */
 .osd-slider .mdl-slider-container .mdl-slider-background-lower-fill {
     background: #ffffff !important;
 }
 
-/* Remove underline on hover and make links bold */
 a,
 a:visited {
     text-decoration: none !important;
@@ -1288,7 +1362,6 @@ a:focus:not(.cardImageContainer) {
     background-color: transparent !important;
 }
 
-/* Card text links - no background on hover */
 .cardText a:hover,
 .cardText a:focus,
 .cardFooterText a:hover,
@@ -1301,7 +1374,6 @@ a:focus:not(.cardImageContainer) {
     background-color: transparent !important;
 }
 
-/*Rounded corners and square hover buttons*/
 .cardContent-button,
 .cardContent-shadow,
 .itemDetailImage,
@@ -1319,22 +1391,26 @@ a:focus:not(.cardImageContainer) {
 {border-radius: 0 !important;}
 
 
-/*Minimalistic play buttons*/
 .cardOverlayFab-primary {background-color: #00000000;}
 .cardOverlayButtonIcon {background-color: #00000000 !important;}
 .cardOverlayContainer {background-color: transparent;}
 
-/*Hide Cast Icon*/
 .headerCastButton {
   display: none;
 }
 
-/*Hide Sync Icon Icon*/
 .headerSyncButton {
   display: none;
 }
 
-/* Played indicator & count indicator - square style in top right corner */
+button:has(.favorite),
+button:has(.favorite_border),
+.btnUserRating,
+.detailButton:has(.favorite),
+.detailButton:has(.favorite_border) {
+    display: none !important;
+}
+
 .playedIndicator,
 .countIndicator {
     position: absolute !important;
@@ -1350,11 +1426,11 @@ a:focus:not(.cardImageContainer) {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 14px !important;
+    font-family: 'Silkscreen', cursive !important;
+    font-size: 12px !important;
     padding: 0 4px !important;
 }
 
-/* Ensure all indicator containers are flush to corner */
 .indicatoricons,
 .indicators,
 .cardIndicators {
@@ -1366,7 +1442,6 @@ a:focus:not(.cardImageContainer) {
     gap: 0 !important;
 }
 
-/* Force inner card footer indicators to top right */
 .innerCardFooter .playedIndicator,
 .innerCardFooter .countIndicator,
 .cardImageContainer .playedIndicator,
@@ -1379,19 +1454,16 @@ a:focus:not(.cardImageContainer) {
     transform: none !important;
 }
 
-/* Remove padding from card image container that might offset indicators */
 .cardImageContainer {
     padding: 0 !important;
 }
 
-/* cardBox and card padding reset */
 .cardBox,
 .card,
 .cardScalable {
     padding: 0 !important;
 }
 
-/* FINAL OVERRIDE - Card play button NO WHITE BORDER */
 html body .cardOverlayFab-primary,
 html body .cardOverlayFab-primary:hover,
 html body .cardOverlayFab-primary:active,
@@ -1416,13 +1488,10 @@ html body span.cardOverlayButtonIcon.cardOverlayButtonIcon-hover {
     -moz-outline-style: none !important;
 }
 
-/* Remove ripple effect from profile button */
 .headerUserButtonRound .mdl-button__ripple-container {
     display: none !important;
 }
 
-/* TV Focus - Override blue borders with white (only on focus) */
-/* Cards need transparent border by default to prevent layout shift on hover */
 .cardBox.visualCardBox,
 .cardScalable,
 .cardBox {
@@ -1432,7 +1501,6 @@ html body span.cardOverlayButtonIcon.cardOverlayButtonIcon-hover {
     box-sizing: border-box !important;
 }
 
-/* Only outline around the whole card, not inner elements */
 html body .card:focus,
 html body .card.show-focus:focus,
 html body .focuscontainer-x .card:focus,
@@ -1451,7 +1519,6 @@ html body .card.show-focus:focus .cardBox {
     box-sizing: border-box !important;
 }
 
-/* Web view hover states - mirror TV focus behavior for season/episode selection */
 html body .card:hover .cardBox,
 html body .card:hover .cardBox.visualCardBox {
     outline: none !important;
@@ -1461,7 +1528,6 @@ html body .card:hover .cardBox.visualCardBox {
     box-sizing: border-box !important;
 }
 
-/* Override any blue accent/primary colors globally */
 html {
     --theme-primary-color: #ffffff !important;
     --accent: #ffffff !important;
@@ -1471,7 +1537,6 @@ html {
     --theme-primary-color: #ffffff !important;
 }
 
-/* Select and input labels - white text */
 .selectLabel,
 label.selectLabel,
 .inputLabel,
@@ -1482,7 +1547,6 @@ label.inputLabel,
     color: #ffffff !important;
 }
 
-/* Remove blue border from select/language selector */
 .emby-select,
 .emby-select:focus,
 .emby-select:active,
@@ -1494,7 +1558,6 @@ select:active {
     box-shadow: none !important;
 }
 
-/* Playback controls - transparent by default, grey ONLY on hover */
 html body .videoOsdBottom button,
 html body .videoOsdBottom .paper-icon-button-light,
 html body .osdControls button,
@@ -1522,7 +1585,6 @@ span.xlargePaperIconButton.material-icons.play_arrow,
     border: none !important;
 }
 
-/* Reset ALL states to transparent */
 html body .osdControls .xlargePaperIconButton:focus,
 html body .osdControls .xlargePaperIconButton:active,
 html body .osdControls .xlargePaperIconButton:focus-visible,
@@ -1537,7 +1599,6 @@ html body .osdControls button:active {
     background: none !important;
 }
 
-/* Grey ONLY on actual hover */
 html body .osdControls .xlargePaperIconButton:hover,
 html body .osdControls .largePaperIconButton:hover,
 html body .videoOsdBottom .xlargePaperIconButton:hover,
@@ -1548,16 +1609,37 @@ html body .osdControls button:hover {
     color: #ffffff !important;
 }
 
-/* Back button in video player - grey hover */
 button:has(.arrow_back):hover,
 .btnVideoOsdBack:hover,
 .headerBackButton:hover,
-button:has(.material-icons.arrow_back):hover {
+button:has(.material-icons.arrow_back):hover,
+.videoOsd button:hover,
+.videoOsd .paper-icon-button-light:hover,
+[data-type="video-osd"] button:hover,
+[data-type="video-osd"] .paper-icon-button-light:hover,
+#videoOsdPage button:hover,
+#videoOsdPage .paper-icon-button-light:hover {
     background-color: #333333 !important;
     color: #ffffff !important;
 }
 
-/* Menu/list items - prevent wobble on hover by using consistent box model */
+span.material-icons.arrow_back,
+.videoOsd span.material-icons.arrow_back,
+[data-type="video-osd"] span.material-icons.arrow_back {
+    padding: 12px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+}
+
+span.material-icons.arrow_back:hover,
+.paper-icon-button-light:has(.arrow_back):hover,
+*:has(> span.material-icons.arrow_back):hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+}
+
 .listItem,
 .menuItem,
 .navMenuOption,
@@ -1585,7 +1667,6 @@ button:has(.material-icons.arrow_back):hover {
     margin: 0 !important;
 }
 
-/* Settings menu items specifically */
 .selectContainer:hover,
 .selectContainer:focus,
 .paperList .listItem:hover,
@@ -1594,11 +1675,62 @@ button:has(.material-icons.arrow_back):hover {
     border: 4px solid transparent !important;
 }
 
-/* ============================================
-   PROFILE BUTTON
-   ============================================ */
+/* DRAWER MENU ICONS */
 
-/* Button - square for hover, matching search button size */
+.navMenuOption,
+.mainDrawer .listItem {
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 16px !important;
+}
+
+.navMenuOptionIcon,
+.navMenuOptionText,
+.sidebarHeader {
+    font-family: 'Silkscreen', cursive !important;
+}
+
+.navMenuOptionIcon {
+    margin-right: 12px !important;
+}
+
+/* SETTINGS PAGE LIST ITEMS */
+
+.listItem {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.listItemIcon {
+    margin-right: 16px !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.listItemIcon::before {
+    position: relative !important;
+    top: 0 !important;
+    line-height: 1 !important;
+}
+
+.listItemBody,
+.listItemBodyText {
+    font-family: 'Silkscreen', cursive !important;
+    line-height: 1.2 !important;
+}
+
+.sectionTitle,
+.headerUsername {
+    font-family: 'Silkscreen', cursive !important;
+}
+
+/* PROFILE BUTTON */
+
 button.headerUserButtonRound,
 button.headerUserButton {
     border-radius: 0 !important;
@@ -1613,7 +1745,6 @@ button.headerUserButton {
     justify-content: center !important;
 }
 
-/* Inner div - round profile picture */
 .headerUserButtonRound > .headerUserButtonRound,
 div.headerUserButtonRound[style] {
     border-radius: 50% !important;
@@ -1621,8 +1752,6 @@ div.headerUserButtonRound[style] {
     overflow: hidden !important;
 }
 
-/* Hover effect on profile button - only set background-color, NOT background shorthand */
-/* The profile image is set via inline background-image, so we must not override it */
 button.headerUserButtonRound:hover,
 button.headerUserButtonRound:focus,
 button.headerUserButtonRound:active,
@@ -1633,7 +1762,6 @@ button.headerUserButtonRound:active,
     outline: none !important;
 }
 
-/* The inner div with the profile image - preserve background-image on hover */
 div.headerUserButtonRound:hover,
 div.headerUserButtonRound:focus,
 .headerUserButtonRound > .headerUserButtonRound:hover,
@@ -1645,7 +1773,6 @@ div.headerUserButtonRound:focus,
     outline: none !important;
 }
 
-/* Hide text labels on Home and Favorites buttons, keep icons */
 .headerTabs .emby-tab-button .emby-button-foreground,
 .headerTabs .emby-tab-button-text,
 button[title="Home"] span:not(.material-icons),
@@ -1653,10 +1780,7 @@ button[title="Favorites"] span:not(.material-icons) {
     display: none !important;
 }
 
-/* ============================================
-   VIDEO PLAYER OSD - play/pause button fix
-   Only targets the video player controls, not card overlays
-   ============================================ */
+/* VIDEO PLAYER OSD */
 html body .videoOsdBottom span.xlargePaperIconButton,
 html body .videoOsdBottom span.largePaperIconButton,
 html body .videoOsdBottom span.xlargePaperIconButton.material-icons,
@@ -1671,7 +1795,6 @@ html body .osdControls span.largePaperIconButton {
     background-color: transparent !important;
 }
 
-/* Only show grey on actual hover - video player OSD only */
 html body .videoOsdBottom span.xlargePaperIconButton:hover,
 html body .videoOsdBottom span.largePaperIconButton:hover,
 html body .videoOsdBottom-maincontrols span.xlargePaperIconButton:hover,
